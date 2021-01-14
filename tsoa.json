@@ -1,0 +1,23 @@
+{
+  "swagger": {
+    "basePath": "/api/v1",
+    "entryFile": "./server/main.ts",
+    "specVersion": 3,
+    "outputDirectory": "./api/dist",
+    "controllerPathGlobs": ["./server/controllers/**/*controller.ts"]
+  },
+  "securityDefinitions": {
+    "jwt": {
+      "type": "http",
+      "scheme": "bearer",
+      "bearerFormat": "JWT"
+    }
+  },
+  "routes": {
+    "basePath": "/api/v1",
+    "entryFile": "./server/main.ts",
+    "routesDir": "./server/routes",
+    "authenticationModule": "./server/middlewares/authentication.ts",
+    "middleware": "express"
+  }
+}
