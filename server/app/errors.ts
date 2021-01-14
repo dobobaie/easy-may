@@ -11,5 +11,6 @@ export default {
   an_error_occured_maybe_invalid_platform_name: 'badData',
 
   private_token_query_is_missing: 'unauthorized',
-  file_not_found: 'badData'
+  file_not_found: 'badData',
+  wrong_file_body: 'badData'
 };

@@ -12,13 +12,16 @@ export const fileUploader = (pathStorage: string) => (
   const multerSingle: express.RequestHandler = multer({
     dest: pathStorage
   }).single('file');
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) =>
     multerSingle(
-      request as any,
-      undefined as any,
+      <Error & express.Request>request,
+      <express.Request & express.Response>request.res,
       (async (error: any) => {
         if (error) {
           reject(error);
+        }
+        if (!request.file) {
+          throw new Error('wrong_file_body');
         }
 
         // Compress pictures
@@ -36,8 +39,8 @@ export const fileUploader = (pathStorage: string) => (
         resolve(null);
       }) as any,
       undefined as any
-    );
-  });
+    )
+  );
 };
 
 export default fileUploader;
