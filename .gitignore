@@ -92,3 +92,4 @@ sw.*
 server/routes/routes.ts
 dist-server
 credentials
+swagger.json

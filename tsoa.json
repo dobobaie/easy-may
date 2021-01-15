@@ -3,7 +3,7 @@
     "basePath": "/api/v1",
     "entryFile": "./server/main.ts",
     "specVersion": 3,
-    "outputDirectory": "./api/dist",
+    "outputDirectory": ".",
     "controllerPathGlobs": ["./server/controllers/**/*controller.ts"]
   },
   "securityDefinitions": {
