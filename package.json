@@ -2,7 +2,7 @@
   "name": "service-easy-may",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "npm run routes && cd .. && npm run ln:apis",
+    "postinstall": "npm run routes",
     "init": "env-cmd -f .env node initialization/entrypoint.js",
     "routes": "node ./node_modules/tsoa/dist/cli.js routes && node ./server/routes/fix_routes.js",
     "swagger": "node ./node_modules/tsoa/dist/cli.js swagger",

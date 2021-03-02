@@ -1,4 +1,4 @@
-# Service Easy May Public
+# Service Easy May
 
 > More details later...
 > This project is a simple dumb "cloud" it will be removed later
