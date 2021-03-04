@@ -1,7 +1,4 @@
 import * as path from 'path';
-import { SignOptions } from 'jsonwebtoken';
-
-import Lib from '../backend-lib';
 
 interface IStaticConfig {
   env: {
@@ -99,7 +96,7 @@ export default (env: NodeJS.ProcessEnv): IConfig => {
       available: ['fr', 'en']
     },
     storage: {
-      path: path.join(__dirname, '../tmp/uploaded')
+      path: path.join(__dirname, '../../tmp/uploaded')
     },
     postgres: {
       port: 5432
