@@ -54,9 +54,10 @@ export class FilesController extends Controller {
   ): Promise<void> {
     const file: {
       path: string;
+      mimetype: string;
     } = await Services.files.retrieveByFilename(filename);
+    request.res.setHeader('Content-type', file.mimetype);
     await fileStream(file.path)(request);
-    return;
   }
 
   @SuccessResponse('201', 'OK')
