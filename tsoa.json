@@ -1,10 +1,9 @@
 {
-  "swagger": {
-    "basePath": "/api/v1",
-    "entryFile": "./server/main.ts",
+  "entryFile": "server/main.ts",
+  "controllerPathGlobs": ["./server/controllers/**/*controller.ts"],
+  "spec": {
     "specVersion": 3,
-    "outputDirectory": ".",
-    "controllerPathGlobs": ["./server/controllers/**/*controller.ts"]
+    "outputDirectory": "."
   },
   "securityDefinitions": {
     "jwt": {

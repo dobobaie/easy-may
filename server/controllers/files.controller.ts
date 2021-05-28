@@ -56,7 +56,7 @@ export class FilesController extends Controller {
       path: string;
       mimetype: string;
     } = await Services.files.retrieveByFilename(filename);
-    request.res.setHeader('Content-type', file.mimetype);
+    request.res?.setHeader('Content-type', file.mimetype);
     await fileStream(file.path)(request);
   }
 

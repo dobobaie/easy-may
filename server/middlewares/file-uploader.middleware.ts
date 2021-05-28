@@ -1,5 +1,4 @@
 import * as express from 'express';
-import fs from 'fs';
 import multer from 'multer';
 import imagemin from 'imagemin';
 import imageminJpegtran from 'imagemin-jpegtran';
@@ -37,8 +36,7 @@ export const fileUploader = (pathStorage: string) => (
         });
 
         resolve(null);
-      }) as any,
-      undefined as any
+      }) as any
     )
   );
 };
